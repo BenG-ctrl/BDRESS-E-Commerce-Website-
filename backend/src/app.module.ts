@@ -24,9 +24,7 @@ import { CartModule } from './cart/cart.module';
     }),
     AuthModule,
     ProductModule,
-    MongooseModule.forRoot(
-      'mongodb+srv://Ben:CLACLA@dbress.t3fwr.mongodb.net/BDress',
-    ),
+    MongooseModule.forRoot(process.env.MONGO_URI),
     MongooseModule.forFeature([{ name: User.name, schema: UserSchema }]),
     CloudinaryModule,
     ProfileModule,
